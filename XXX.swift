@@ -17,6 +17,7 @@ class GDB{
 
 let gdb = GDB()
 let dbEagle = DBEagle()
+//let dbFeed = DBFeed()
 
 /// 被管理的数据上下文   初始化的后，必须设置持久化存储助理
 var managedObjectContext: NSManagedObjectContext = {
@@ -98,7 +99,7 @@ func MD5(string: String) -> String {
 
 
 func save_eagle(title:String, url:String){
-    dbEagle.save(title: title, url: title)
+    dbEagle.save(title: title, url: url)
 }
 
 func eagle_list()->[EagleList]{
